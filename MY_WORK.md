@@ -29,11 +29,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | [Joudi Ghazi Zainah] |
+| **Student ID** | [446052698] |
+| **University Email** | [446052698]@std.psau.edu.sa |
+| **GitHub Username** | [Joudi-Zainah] |
+| **Repository Link** | [https://github.com/Joudi-Zainah/OS-Assignment1-Joudi-Zainah] |
  
 ---
 
