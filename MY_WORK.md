@@ -237,7 +237,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[I learned that the program can run multiple threads to do or perform a task, by multithreading. In addition the Runnable interface defines the task that a thread will execute responding to its run() method. I also learned how to use methods such as Thread.start() to start a thread.Also Thread.join() makes the program wait for a thread to finish before continuing.Through multithreading, I learned that threads need to be coordinated carefully to keep the simulation organized and running correctly.]
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -245,7 +245,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[The first challenge was setting up the correct development tools and environment for my operating system, which took some time. Another challenge was adding process priorities without affecting the Round-Robin scheduling order. For the context switch counter,I had to know the correct place to count each time a process started running. For the waiting time feature I needed to calculate how long each process waited in the ready queue accurately. Also I  had to make sure each process appeared only once in the final summary table because each process can be with multiple thread.]
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -253,7 +253,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[First of all I read the assignment instruction and understanding the code carfully. I worked step by step for each feature rather than doing them all at ones. With every change that I make I run the program to check the output. Also I checked that process priorities were displayed without changing the Round-Robin queue order. I also checked the context switch counter and the final waiting time summary.For the last feature I checked the waiting time and turnaround time values in the summary table.]
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -261,7 +261,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[Firstly multithreading is useful because it allows an application to handle multiple tasks at the same time. For example, in a photo editing app can process image changes while still responding to user actions.In a shopping app, users can search for products while their shopping cart updates in the background.In a banking app, users can view their account information while recent transactions are loading .Also, in a web browser can download files while the continues browsing.]
 
 ### Optional: What would you like to learn more about?
 
@@ -293,7 +293,7 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[A process is a program in execution that has its own memory space and a thread is a part of execution within a process. when we talk about a single process can contain multiple threads, which share the process's memory and resources. Threads are usually easier and faster to create than processes, and they can share data because they belong to the same process. In my code, the Process class represents a simulated process, and new Thread(process) creates a thread to execute its code. Also start() starts the thread and join() makes the scheduler wait for it to finish.]
 
 ## Question 2: Ready Queue Behavior
 
@@ -305,15 +305,35 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[Round robin scheduling gives each process a fixed amount of time called a time quantum. If a process does not finish within its time quantum it goes back to the end of the queue to wait for its next turn. In my code the time quantum is 2000 milliseconds, so process P1 runs for 2000 milliseconds first and then has 1925 milliseconds remaining. P1 goes back to the queue and runs again later until it finishes. This continues until all processes are completed.]
 
 Example from my output:
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
+[
+  ▶ P1 executing quantum [2000ms] 
+  ⚡ Quantum progress: [███████████████] 100%
+  ⏸ P1 completed quantum 2000ms │ Overall progress: [██████████░░░░░░░░░░] 50%
+     Remaining time: 1925ms
+  ↻ P1 yields CPU for context switch
+
+  ➕ P1 added to ready queue │ Burst time: 3925ms
+ Priority: 2
+┌─ Ready Queue ─────────────────────────────────────────────────────────────────
+│ [P3 → P4 → P5 → P6 → P7 → P8 → P9 → P10 → P11 → P12 → P13 → P14 → P15 → P16 → P1]
+└───────────────────────────────────────────────────────────────────────────────
+▶ P1 executing quantum [1925ms] 
+  ⚡ Quantum progress: [███████████████] 100%
+  ⏸ P1 completed quantum 1925ms │ Overall progress: [████████████████████] 100%
+     Remaining time: 0ms
+  ✓ P1 finished execution!
+
+┌─ Ready Queue ─────────────────────────────────────────────────────────────────
+│ [P3 → P6 → P7 → P8 → P11 → P13 → P14 → P15 → P16]
+└───────────────────────────────────────────────────────────────────────────────]
 ```
 
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+[The first executes of P1 for 2000 ms but still has 1925 ms remaining so it waited till the end of the ready queue. Other processes get their turns before P1. Then P1 executes for the remaining 1925 ms and finishes.]
 
 ## Question 3: Thread Lifecycle
 
@@ -323,15 +343,15 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**: [P1 is in the New state when I create its thread using new Thread(process), before I call start().]
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: [P1 becomes Runnable when I call start(), which allows the thread to start executing.]
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: [P1 is Running when it is executing its code.]
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+4. **Waiting**: [A thread waits when it needs to wait for another thread to finish. In my code for example, the main thread uses join() to wait for the process threads, and p1 pause for a short time using Thread.sleep().]
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: [P1 is Terminated when it finishes executing its run() method.]
 
 ## Question 4: Real-World Applications
 
@@ -344,29 +364,29 @@ Example from my output:
 ### Example 1 (operating-system level): [Name of scenario]
 
 **Description**:
-[Describe the real-world scenario.]
+[an operating system uses Round Robin to give each process a turn to use the CPU. Each process gets a time quantum and if it does not finish it goes back to the end of the queue. This is similar to my simulation where each process runs for 2000 milliseconds before moveing to the next process. The context switch happens when the CPU stops running one process and switches to another.]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[Round Robin works well because each process gets a fair chance to use the CPU. It also helps the system respond faster instead of making one process wait too long. The time quantum makes the scheduling more predictable.]
 
-### Example 2: [Name of application/scenario]
+### Example 2: [Handling Multiple Client Requests in a Server]
 
 **Description**:
-[Describe the real-world scenario or application.]
+[A server can use Round Robin to give different client tasks a turn to execute using threads. Each thread gets a limited amount of execution time before the scheduler moves to another ready thread. This is similar to my simulation where each process gets 2000 milliseconds and unfinished processes return to the queue. A context switch happens when the CPU switches from one thread to another.]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[Round Robin can help prevent one thread from using all the CPU time while other threads wait. It improves fairness and helps different client tasks get a chance to execute. This is useful when a server handles multiple tasks at the same time, although real servers may use other scheduling methods too.]
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1.How Round Robin uses a time quantum to schedule processes.
+2.How context switching allows the CPU to execute different tasks.
+3.The difference between a process and a thread.
 
 **Concepts I need to study more:**
-1.
-2.
+1.How different scheduling algorithms compare in terms of fairness and response time.
+2.How context switching works in operating systems.
 
 ---
 
