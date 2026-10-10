@@ -129,68 +129,88 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [October 4, 2026, 7:34 PM]
+**What I did**:Set up the project environment, and update the student ID.
 
 **Details**:
+1-Downloaded the required project files.
+2-Opened the project in the IDE.
+3-Checked the required tools and extensions.
+4-Committed my changes to Git.
 
-**Challenges**:
+**Challenges**:Installing Git and the required extensions was challenging.
 
-**Solution**:
+**Solution**:I checked which tools and extensions were suitable for my operating system and installed them correctly.
 
-**Time spent**:
+**Time spent**:3 hours.
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**:
+### Entry 2 - [October 6, 2026, 12:00 AM]
+**What I did**:Implemented the priority feature.
 
 **Details**:
+1-Added the priority feature to the simulation.
+2-Worked on assigning priority values to processes.
+3-Checked the priority values in the program output.
+4-Committed my changes to Git.
 
-**Challenges**:
+**Challenges**:Adding priority without affecting the Round Robin scheduling was challenging.
 
-**Solution**:
+**Solution**:I made sure I understood how priority works and checked the program output after implementing the feature.
 
-**Time spent**:
+**Time spent**:1 hour
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 3 - [October 6, 2026, 12:52 AM]
+**What I did**:Implemented the context-switching feature.
 
 **Details**:
+1-Added the context-switching logic to the simulation.
+2-Worked on tracking switches between processes.
+3-Checked the context-switching output.
+4-Committed my changes to Git.
 
-**Challenges**:
+**Challenges**:Tracking context switches correctly and making sure they were calculated properly was challenging.
 
-**Solution**:
+**Solution**:I reviewed the context-switching logic and checked the output to make sure the number of switches was correct.
 
-**Time spent**:
+**Time spent**:1 hours and half.
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**:
+### Entry 4 - [October 8, 2026, 10:31 PM]
+**What I did**:Implemented waiting time and turnaround time.
 
 **Details**:
+1-Worked on calculating the waiting time for each process.
+2-Added the turnaround time calculation.
+3-Checked the results in the program output.
+4-Committed my changes to Git.
 
-**Challenges**:
+**Challenges**:Calculating waiting time and turnaround time correctly and displaying them without repeating the results was challenging.
 
-**Solution**:
+**Solution**:I used output logic to display the results correctly and avoid duplication.
 
-**Time spent**:
+**Time spent**:3 hours and half.
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 5 - [October 8, 2026, 11:16 PM]
+**What I did**:Worked on the My Work file.
 
 **Details**:
+1-Worked on answering the assignment questions in the My Work file.
+2-Answered the technical questions related to the assignment.
+3-Reviewed my answers and made sure they matched the concepts used in the code.
+4-Committed my changes to Git.
 
-**Challenges**:
+**Challenges**:Understanding the technical questions and connecting the theoretical concepts to the code was challenging.
 
-**Solution**:
+**Solution**:I reviewed the concepts and tried to explain them in my own words while connecting them to the code.
 
-**Time spent**:
+**Time spent**:2 hours and half.
 
 ---
 
@@ -211,13 +231,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [11 hours and half]
 
-**Most challenging part**:
+**Most challenging part**:Calculating waiting time and turnaround time correctly and displaying the results without repetition.
 
-**Most interesting learning**:
+**Most interesting learning**:Understanding how different scheduling concepts work together in the simulation.
 
-**What I would do differently next time**:
+**What I would do differently next time**:I would plan the implementation more carefully and test each feature step by step.
 
 ---
 
